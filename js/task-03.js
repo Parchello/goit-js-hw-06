@@ -22,6 +22,7 @@ function createImages(arr) {
       ({ url, alt }) => `<li><img src="${url}" alt="${alt}" width='400px'></li>`
     )
     .join("");
+
   console.log(markup);
   gallery.insertAdjacentHTML("beforeend", markup);
 }
