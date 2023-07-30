@@ -1,12 +1,13 @@
-const input = document.querySelector('[data-length="6"]');
-input.addEventListener("blure", onbBorderChange);
+const input = document.querySelector("#validation-input");
+input.addEventListener("blur", onBorderChange);
 
 function onBorderChange(event) {
   const dataInput = event.currentTarget;
-  if (dataInput.value.length === Number(6)) {
-    input.add.classList(".valid");
+  if (dataInput.value.length === Number(input.dataset.length)) {
+    input.classList.add("valid");
+    input.classList.remove("invalid");
   } else {
-    input.add.classList(".invalid ");
+    input.classList.add("invalid");
+    input.classList.remove("valid");
   }
-  console.dir(event.currentTarget);
 }
